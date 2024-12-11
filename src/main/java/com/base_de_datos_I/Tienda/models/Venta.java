@@ -7,7 +7,7 @@ import java.util.List;
 
 public class Venta {
 
-    private Long codigoVenta;
+    private int codigoVenta;
 
     private String correlativo;
 
@@ -26,14 +26,17 @@ public class Venta {
     private double total;
 
     public Venta() {
+        this.horaVenta = LocalTime.now();
+        this.fechaVenta = LocalDate.now();
         this.detalleVenta = new ArrayList<>();
+        this.cliente = new Cliente();
     }
 
-    public Long getCodigoVenta() {
+    public int getCodigoVenta() {
         return codigoVenta;
     }
 
-    public void setCodigoVenta(Long codigoVenta) {
+    public void setCodigoVenta(int codigoVenta) {
         this.codigoVenta = codigoVenta;
     }
 

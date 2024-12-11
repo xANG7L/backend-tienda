@@ -12,6 +12,72 @@ public class DetalleVenta {
 
     private double descuento;
 
-    private double monto;
+    private double montoTotal;
+
+    public DetalleVenta() {
+        this.producto = new Producto();
+    }
+
+    public Long getIdDetalleVenta() {
+        return idDetalleVenta;
+    }
+
+    public void setIdDetalleVenta(Long idDetalleVenta) {
+        this.idDetalleVenta = idDetalleVenta;
+    }
+
+    public Producto getProducto() {
+        return producto;
+    }
+
+    public void setProducto(Producto producto) {
+        this.producto = producto;
+    }
+
+    public double getPrecioUnitario() {
+        return precioUnitario;
+    }
+
+    public void setPrecioUnitario(double precioUnitario) {
+        this.precioUnitario = precioUnitario;
+    }
+
+    public double getCantidad() {
+        return cantidad;
+    }
+
+    public void setCantidad(double cantidad) {
+        this.cantidad = cantidad;
+    }
+
+    public double getDescuento() {
+        return descuento;
+    }
+
+    public void setDescuento(double descuento) {
+        this.descuento = descuento;
+    }
+
+    public double getMontoTotal() {
+        return montoTotal;
+    }
+
+    public void setMonto(double montoTotal) {
+        this.montoTotal = montoTotal;
+    }
+
+    //getters para factura
+    public String getCodigoProducto() {
+        return producto != null ? producto.getCodigo(): "-----";
+    }
+
+    public String getNombreProducto() {
+        return producto != null ? producto.getNombre(): "-----";
+    }
+
+  /*  public Double getCantidad() {
+        return producto != null ? producto.getCodigo(): "-----";
+    }*/
+
 
 }
